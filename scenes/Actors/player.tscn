@@ -75,24 +75,24 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 12 ), ExtResource( 59 ), ExtResource( 4 ), ExtResource( 51 ), ExtResource( 48 ), ExtResource( 61 ), ExtResource( 40 ), ExtResource( 19 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "dead",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 30 ), ExtResource( 36 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "attack",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 37 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 3 ), ExtResource( 47 ), ExtResource( 58 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 10 ), ExtResource( 56 ) ],
-"loop": true,
-"name": "jumpAttack",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 50 ), ExtResource( 20 ), ExtResource( 49 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 39 ), ExtResource( 14 ), ExtResource( 32 ), ExtResource( 45 ) ],
 "loop": true,
 "name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 12 ), ExtResource( 59 ), ExtResource( 4 ), ExtResource( 51 ), ExtResource( 48 ), ExtResource( 61 ), ExtResource( 40 ), ExtResource( 19 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 3 ), ExtResource( 47 ), ExtResource( 58 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 10 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "jumpAttack",
 "speed": 10.0
 } ]
 
@@ -101,16 +101,17 @@ animations = [ {
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 448.532, 85.6747 )
 script = ExtResource( 52 )
+GRAVITY = 500.0
 
 [node name="player" type="AnimatedSprite" parent="Player"]
-position = Vector2( -198.612, 225.049 )
-scale = Vector2( 0.448587, 0.448587 )
+position = Vector2( -270.531, 168.275 )
+scale = Vector2( 0.208654, 0.208654 )
 frames = SubResource( 1 )
 animation = "attack"
 frame = 3
 script = ExtResource( 53 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
-position = Vector2( -221.839, 207.663 )
-scale = Vector2( 0.317593, 0.317593 )
-polygon = PoolVector2Array( -86.9216, -398.502, -215.288, -277.687, -234.166, -160.646, -211.513, -47.3814, -211.513, -43.6059, -253.043, 31.9039, -253.043, 31.9039, -177.533, 141.393, -169.983, 141.393, -109.575, 175.373, -109.575, 182.924, -188.86, 243.332, -188.86, 243.332, -211.513, 349.045, -211.513, 349.045, -188.86, 386.8, -188.86, 386.8, -230.39, 466.086, -230.39, 466.086, -222.839, 477.412, -222.839, 477.412, -83.1461, 481.188, -79.3706, 439.657, -79.3706, 439.657, -7.63623, 390.576, -7.63623, 383.025, 15.0167, 333.943, 15.0167, 333.943, 56.5472, 345.27, 56.5472, 345.27, 56.5472, 413.229, 56.5472, 413.229, 45.2206, 439.657, 45.2206, 447.208, 45.2206, 481.188, 45.2206, 481.188, 173.588, 488.739, 173.588, 488.739, 192.465, 450.984, 192.465, 450.984, 124.506, 401.902, 120.731, 398.127, 120.731, 398.127, 124.506, 337.719, 124.506, 337.719, 94.3021, 292.413, 94.3021, 292.413, 60.3226, 258.434, 60.3226, 258.434, 60.3226, 258.434, 48.9962, 209.352, 48.9962, 201.801, 128.282, 171.597, 147.159, 171.597, 166.036, 198.026, 211.342, 156.495, 211.342, 156.495, 203.791, 107.414, 203.791, 107.414, 233.995, 107.414, 233.995, 107.414, 252.873, 16.802, 252.873, 16.802, 249.097, -58.7079, 245.322, -62.4834, 215.118, -171.973, 203.791, -187.075, 101.853, -258.809, 101.853, -258.809, -15.1873, -255.034, -3.86084, -255.034, -3.86084, -255.034, -34.0647, -372.074, -34.0647, -372.074 )
+position = Vector2( -180.799, 71.4321 )
+scale = Vector2( 0.447344, 0.447344 )
+polygon = PoolVector2Array( -253.549, 83.7305, -304.491, 134.673, -294.003, 191.609, -301.495, 229.066, -267.034, 254.537, -294.003, 296.49, -285.013, 327.955, -305.99, 353.426, -237.068, 356.422, -154.661, 363.914, -172.64, 320.463, -196.613, 280.009, -180.132, 260.531, -151.664, 262.029, -136.681, 227.568, -147.169, 160.144, -177.135, 122.686, -222.085, 122.686, -235.569, 82.2322 )
