@@ -1,0 +1,116 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://sprites/knight/Idle (2).png" type="Texture" id=1]
+[ext_resource path="res://sprites/knight/Attack (1).png" type="Texture" id=2]
+[ext_resource path="res://sprites/knight/JumpAttack (4).png" type="Texture" id=3]
+[ext_resource path="res://sprites/knight/Dead (4).png" type="Texture" id=4]
+[ext_resource path="res://sprites/knight/Idle (5).png" type="Texture" id=5]
+[ext_resource path="res://sprites/knight/Attack (7).png" type="Texture" id=6]
+[ext_resource path="res://sprites/knight/Attack (6).png" type="Texture" id=7]
+[ext_resource path="res://sprites/knight/Idle (7).png" type="Texture" id=8]
+[ext_resource path="res://sprites/knight/Run (8).png" type="Texture" id=9]
+[ext_resource path="res://sprites/knight/JumpAttack (9).png" type="Texture" id=10]
+[ext_resource path="res://sprites/knight/Idle (4).png" type="Texture" id=11]
+[ext_resource path="res://sprites/knight/Dead (2).png" type="Texture" id=12]
+[ext_resource path="res://sprites/knight/JumpAttack (7).png" type="Texture" id=13]
+[ext_resource path="res://sprites/knight/Jump (8).png" type="Texture" id=14]
+[ext_resource path="res://sprites/knight/Jump (6).png" type="Texture" id=15]
+[ext_resource path="res://sprites/knight/Attack (9).png" type="Texture" id=16]
+[ext_resource path="res://sprites/knight/Idle (1).png" type="Texture" id=17]
+[ext_resource path="res://sprites/knight/Idle (9).png" type="Texture" id=18]
+[ext_resource path="res://sprites/knight/Dead (9).png" type="Texture" id=19]
+[ext_resource path="res://sprites/knight/Jump (2).png" type="Texture" id=20]
+[ext_resource path="res://sprites/knight/Dead (10).png" type="Texture" id=21]
+[ext_resource path="res://sprites/knight/Dead (1).png" type="Texture" id=22]
+[ext_resource path="res://sprites/knight/Run (3).png" type="Texture" id=23]
+[ext_resource path="res://sprites/knight/Jump (5).png" type="Texture" id=24]
+[ext_resource path="res://sprites/knight/Attack (8).png" type="Texture" id=25]
+[ext_resource path="res://sprites/knight/Attack (2).png" type="Texture" id=26]
+[ext_resource path="res://sprites/knight/Idle (8).png" type="Texture" id=27]
+[ext_resource path="res://sprites/knight/Attack (10).png" type="Texture" id=28]
+[ext_resource path="res://sprites/knight/Jump (4).png" type="Texture" id=29]
+[ext_resource path="res://sprites/knight/Attack (4).png" type="Texture" id=30]
+[ext_resource path="res://sprites/knight/Run (1).png" type="Texture" id=31]
+[ext_resource path="res://sprites/knight/Jump (9).png" type="Texture" id=32]
+[ext_resource path="res://sprites/knight/Idle (6).png" type="Texture" id=33]
+[ext_resource path="res://sprites/knight/Run (7).png" type="Texture" id=34]
+[ext_resource path="res://sprites/knight/Run (10).png" type="Texture" id=35]
+[ext_resource path="res://sprites/knight/Attack (5).png" type="Texture" id=36]
+[ext_resource path="res://sprites/knight/JumpAttack (1).png" type="Texture" id=37]
+[ext_resource path="res://sprites/knight/Attack (3).png" type="Texture" id=38]
+[ext_resource path="res://sprites/knight/Jump (7).png" type="Texture" id=39]
+[ext_resource path="res://sprites/knight/Dead (8).png" type="Texture" id=40]
+[ext_resource path="res://sprites/knight/Run (6).png" type="Texture" id=41]
+[ext_resource path="res://sprites/knight/Idle (3).png" type="Texture" id=42]
+[ext_resource path="res://sprites/knight/JumpAttack (8).png" type="Texture" id=43]
+[ext_resource path="res://sprites/knight/Idle (10).png" type="Texture" id=44]
+[ext_resource path="res://sprites/knight/Jump (10).png" type="Texture" id=45]
+[ext_resource path="res://sprites/knight/Run (4).png" type="Texture" id=46]
+[ext_resource path="res://sprites/knight/JumpAttack (5).png" type="Texture" id=47]
+[ext_resource path="res://sprites/knight/Dead (6).png" type="Texture" id=48]
+[ext_resource path="res://sprites/knight/Jump (3).png" type="Texture" id=49]
+[ext_resource path="res://sprites/knight/Jump (1).png" type="Texture" id=50]
+[ext_resource path="res://sprites/knight/Dead (5).png" type="Texture" id=51]
+[ext_resource path="res://Actors/KinematicBodyPlayer.gd" type="Script" id=52]
+[ext_resource path="res://Actors/Player.gd" type="Script" id=53]
+[ext_resource path="res://sprites/knight/Run (9).png" type="Texture" id=54]
+[ext_resource path="res://sprites/knight/JumpAttack (2).png" type="Texture" id=55]
+[ext_resource path="res://sprites/knight/JumpAttack (10).png" type="Texture" id=56]
+[ext_resource path="res://sprites/knight/Run (2).png" type="Texture" id=57]
+[ext_resource path="res://sprites/knight/JumpAttack (6).png" type="Texture" id=58]
+[ext_resource path="res://sprites/knight/Dead (3).png" type="Texture" id=59]
+[ext_resource path="res://sprites/knight/JumpAttack (3).png" type="Texture" id=60]
+[ext_resource path="res://sprites/knight/Dead (7).png" type="Texture" id=61]
+[ext_resource path="res://sprites/knight/Run (5).png" type="Texture" id=62]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 1 ), ExtResource( 42 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 33 ), ExtResource( 8 ), ExtResource( 27 ), ExtResource( 18 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 57 ), ExtResource( 23 ), ExtResource( 46 ), ExtResource( 62 ), ExtResource( 41 ), ExtResource( 34 ), ExtResource( 9 ), ExtResource( 54 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 12 ), ExtResource( 59 ), ExtResource( 4 ), ExtResource( 51 ), ExtResource( 48 ), ExtResource( 61 ), ExtResource( 40 ), ExtResource( 19 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 30 ), ExtResource( 36 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "attack",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 3 ), ExtResource( 47 ), ExtResource( 58 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 10 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "jumpAttack",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 20 ), ExtResource( 49 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 39 ), ExtResource( 14 ), ExtResource( 32 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+} ]
+
+[node name="root" type="Node"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 448.532, 85.6747 )
+script = ExtResource( 52 )
+
+[node name="player" type="AnimatedSprite" parent="Player"]
+position = Vector2( -198.612, 225.049 )
+scale = Vector2( 0.448587, 0.448587 )
+frames = SubResource( 1 )
+animation = "attack"
+frame = 3
+script = ExtResource( 53 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+position = Vector2( -221.839, 207.663 )
+scale = Vector2( 0.317593, 0.317593 )
+polygon = PoolVector2Array( -86.9216, -398.502, -215.288, -277.687, -234.166, -160.646, -211.513, -47.3814, -211.513, -43.6059, -253.043, 31.9039, -253.043, 31.9039, -177.533, 141.393, -169.983, 141.393, -109.575, 175.373, -109.575, 182.924, -188.86, 243.332, -188.86, 243.332, -211.513, 349.045, -211.513, 349.045, -188.86, 386.8, -188.86, 386.8, -230.39, 466.086, -230.39, 466.086, -222.839, 477.412, -222.839, 477.412, -83.1461, 481.188, -79.3706, 439.657, -79.3706, 439.657, -7.63623, 390.576, -7.63623, 383.025, 15.0167, 333.943, 15.0167, 333.943, 56.5472, 345.27, 56.5472, 345.27, 56.5472, 413.229, 56.5472, 413.229, 45.2206, 439.657, 45.2206, 447.208, 45.2206, 481.188, 45.2206, 481.188, 173.588, 488.739, 173.588, 488.739, 192.465, 450.984, 192.465, 450.984, 124.506, 401.902, 120.731, 398.127, 120.731, 398.127, 124.506, 337.719, 124.506, 337.719, 94.3021, 292.413, 94.3021, 292.413, 60.3226, 258.434, 60.3226, 258.434, 60.3226, 258.434, 48.9962, 209.352, 48.9962, 201.801, 128.282, 171.597, 147.159, 171.597, 166.036, 198.026, 211.342, 156.495, 211.342, 156.495, 203.791, 107.414, 203.791, 107.414, 233.995, 107.414, 233.995, 107.414, 252.873, 16.802, 252.873, 16.802, 249.097, -58.7079, 245.322, -62.4834, 215.118, -171.973, 203.791, -187.075, 101.853, -258.809, 101.853, -258.809, -15.1873, -255.034, -3.86084, -255.034, -3.86084, -255.034, -34.0647, -372.074, -34.0647, -372.074 )
