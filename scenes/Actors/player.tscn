@@ -102,7 +102,7 @@ script = ExtResource( 52 )
 speed = Vector2( 500, 1000 )
 
 [node name="player" type="AnimatedSprite" parent="."]
-position = Vector2( -270.531, 168.275 )
+position = Vector2( -277.531, 167.775 )
 scale = Vector2( 0.208654, 0.208654 )
 frames = SubResource( 1 )
 animation = "attack"
@@ -111,11 +111,21 @@ frame = 3
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -180.799, 71.4321 )
 scale = Vector2( 0.447344, 0.447344 )
-polygon = PoolVector2Array( -253.549, 83.7305, -304.491, 134.673, -294.003, 191.609, -301.495, 229.066, -267.034, 254.537, -294.003, 296.49, -285.013, 327.955, -305.99, 353.426, -237.068, 356.422, -154.661, 363.914, -172.64, 320.463, -196.613, 280.009, -180.132, 260.531, -151.664, 262.029, -136.681, 227.568, -147.169, 160.144, -177.135, 122.686, -222.085, 122.686, -235.569, 82.2322 )
+polygon = PoolVector2Array( -253.549, 83.7305, -304.491, 134.673, -294.003, 191.609, -301.495, 229.066, -267.034, 254.537, -294.003, 296.49, -285.013, 327.955, -290.464, 340.662, -236.815, 341.78, -183.165, 348.486, -172.64, 320.463, -196.613, 280.009, -180.132, 260.531, -188.753, 254.599, -171.987, 219.95, -169.752, 154.005, -177.135, 122.686, -222.085, 122.686, -235.569, 82.2322 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 92.3886, 41.7893 )
 current = true
+limit_left = 0
+limit_top = 0
+limit_right = 100000
+limit_bottom = 610
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.0
+drag_margin_right = 0.0
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 modulate = Color( 0.0784314, 0.129412, 0.894118, 1 )
@@ -123,6 +133,8 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyDetector"]
-polygon = PoolVector2Array( -315.535, 229.525, -315.535, 229.525, -250.499, 233.089, -266.09, 200.125, -266.981, 188.544, -248.717, 183.644, -239.363, 150.235, -253.172, 119.054, -289.699, 102.572, -312.862, 114.154, -320.435, 141.772, -316.426, 165.38, -314.644, 190.771 )
+modulate = Color( 0.803922, 0.819608, 0.847059, 1 )
+position = Vector2( 1, 1.5 )
+polygon = PoolVector2Array( -327.237, 225.325, -315.535, 229.525, -245.237, 231.825, -251.032, 211.325, -249.532, 198.825, -259.237, 187.825, -249.237, 176.825, -249.737, 152.325, -253.032, 109.325, -289.532, 96.8253, -317.032, 108.325, -327.532, 141.825, -328.032, 163.325, -326.737, 188.825 )
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
