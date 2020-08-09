@@ -39,7 +39,7 @@ animation = "death"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -137.444, -190.089 )
-polygon = PoolVector2Array( 22.2323, 193.492, 22.2323, 236.959, 226.969, 241.684, 247.443, 241.054, 251.538, 190.342, 217.205, 145.3, 142.24, 136.48, 62.8647, 147.819, 22.2323, 147.505 )
+polygon = PoolVector2Array( 14.6523, 193.992, 91.4634, 242.728, 226.969, 241.684, 247.443, 241.054, 251.538, 190.342, 217.205, 145.3, 142.24, 136.48, 62.8647, 147.819, 51.2038, 169.625 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 position = Vector2( -110.184, -41.9211 )
@@ -50,9 +50,8 @@ physics_process_parent = true
 [node name="AttackDetector" type="Area2D" parent="."]
 modulate = Color( 0.0196078, 0.152941, 0.611765, 1 )
 position = Vector2( 2.12131, 5.30331 )
-monitorable = false
-collision_layer = 0
+collision_layer = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AttackDetector"]
-polygon = PoolVector2Array( -81.3773, -56.3576, -2.6998, -63.9257, 102.182, -54.5612, 125.805, 7.63556, 96.5631, 52.5677, 57.5692, 22.8384, 91.319, -21.2239, -9.0676, -43.6985, -66.1746, -30.5482, -55.2144, 1.62515, -63.0067, 18.1067, -6.07047, 48.6478, -92.691, 48.6478, -132.289, 4.80713 )
+polygon = PoolVector2Array( -85.7128, -61.7891, 2.75232, -77.681, 102.182, -54.5612, 128.828, 10.7841, 111.877, 46.2761, 96.5631, 52.5677, 57.5692, 22.8384, 91.319, -21.2239, -9.0676, -43.6985, -66.1746, -30.5482, -55.2144, 1.62515, -63.0067, 18.1067, -6.07047, 48.6478, -92.691, 48.6478, -130.74, 45.7464, -136.037, -3.51862, -110.61, -27.3565 )
 [connection signal="body_shape_entered" from="AttackDetector" to="." method="_on_AttackDetector_body_shape_entered"]

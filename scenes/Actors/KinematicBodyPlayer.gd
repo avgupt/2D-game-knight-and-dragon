@@ -1,15 +1,25 @@
 extends Actor
 
+export var attack_impulse: = 1000.0
+
 func _ready():
 	$player.play("idle")
 	set_process(true)
 	
 func _process(delta):
+	
 	if (Input.is_key_pressed(KEY_RIGHT)):
 		$player.play("run")
 	
 	if Input.is_key_pressed(KEY_SPACE):
 		$player.play("jump")
+		
+		
+func _on_EnemyDetector_area_entered(area):
+	velocity = calculate_attack_velocity(velocity, attack_impulse)
+
+func _on_EnemyDetector_body_entered(body):
+	queue_free()
 
 func _physics_process(delta):
 	var direction: = get_direction()
@@ -43,3 +53,9 @@ func calculate_move_velocity(
 func update_animation():
 	$player.play("idle")
 		
+func calculate_attack_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
+	var new_velocity: = linear_velocity
+	new_velocity.y = -impulse
+	return new_velocity
+
+

@@ -116,3 +116,13 @@ polygon = PoolVector2Array( -253.549, 83.7305, -304.491, 134.673, -294.003, 191.
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 92.3886, 41.7893 )
 current = true
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+modulate = Color( 0.0784314, 0.129412, 0.894118, 1 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyDetector"]
+polygon = PoolVector2Array( -315.535, 229.525, -315.535, 229.525, -250.499, 233.089, -266.09, 200.125, -266.981, 188.544, -248.717, 183.644, -239.363, 150.235, -253.172, 119.054, -289.699, 102.572, -312.862, 114.154, -320.435, 141.772, -316.426, 165.38, -314.644, 190.771 )
+[connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
+[connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
