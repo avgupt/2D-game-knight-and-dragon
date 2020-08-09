@@ -7,7 +7,3 @@ export var GRAVITY: = 3000.0
 
 var velocity = Vector2.ZERO
 
-func _physics_process(delta):
-	velocity.y += GRAVITY * delta
-	velocity = move_and_slide(velocity) 
-	$player.play("run")

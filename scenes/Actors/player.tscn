@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://sprites/knight/Idle (2).png" type="Texture" id=1]
 [ext_resource path="res://sprites/knight/Attack (1).png" type="Texture" id=2]
@@ -52,7 +52,6 @@
 [ext_resource path="res://sprites/knight/Jump (1).png" type="Texture" id=50]
 [ext_resource path="res://sprites/knight/Dead (5).png" type="Texture" id=51]
 [ext_resource path="res://Actors/KinematicBodyPlayer.gd" type="Script" id=52]
-[ext_resource path="res://Actors/Player.gd" type="Script" id=53]
 [ext_resource path="res://sprites/knight/Run (9).png" type="Texture" id=54]
 [ext_resource path="res://sprites/knight/JumpAttack (2).png" type="Texture" id=55]
 [ext_resource path="res://sprites/knight/JumpAttack (10).png" type="Texture" id=56]
@@ -75,14 +74,14 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 37 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 3 ), ExtResource( 47 ), ExtResource( 58 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 10 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "jumpAttack",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 2 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 30 ), ExtResource( 36 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "attack",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 50 ), ExtResource( 20 ), ExtResource( 49 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 39 ), ExtResource( 14 ), ExtResource( 32 ), ExtResource( 45 ) ],
-"loop": true,
-"name": "jump",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 12 ), ExtResource( 59 ), ExtResource( 4 ), ExtResource( 51 ), ExtResource( 48 ), ExtResource( 61 ), ExtResource( 40 ), ExtResource( 19 ), ExtResource( 21 ) ],
@@ -90,28 +89,26 @@ animations = [ {
 "name": "dead",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 37 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 3 ), ExtResource( 47 ), ExtResource( 58 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 10 ), ExtResource( 56 ) ],
+"frames": [ ExtResource( 50 ), ExtResource( 20 ), ExtResource( 49 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 39 ), ExtResource( 14 ), ExtResource( 32 ), ExtResource( 45 ) ],
 "loop": true,
-"name": "jumpAttack",
+"name": "jump",
 "speed": 10.0
 } ]
 
-[node name="root" type="Node"]
-
-[node name="Player" type="KinematicBody2D" parent="."]
+[node name="Player" type="KinematicBody2D"]
 position = Vector2( 448.532, 85.6747 )
+collision_mask = 8
 script = ExtResource( 52 )
-GRAVITY = 500.0
+speed = Vector2( 500, 1000 )
 
-[node name="player" type="AnimatedSprite" parent="Player"]
+[node name="player" type="AnimatedSprite" parent="."]
 position = Vector2( -270.531, 168.275 )
 scale = Vector2( 0.208654, 0.208654 )
 frames = SubResource( 1 )
 animation = "attack"
 frame = 3
-script = ExtResource( 53 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -180.799, 71.4321 )
 scale = Vector2( 0.447344, 0.447344 )
 polygon = PoolVector2Array( -253.549, 83.7305, -304.491, 134.673, -294.003, 191.609, -301.495, 229.066, -267.034, 254.537, -294.003, 296.49, -285.013, 327.955, -305.99, 353.426, -237.068, 356.422, -154.661, 363.914, -172.64, 320.463, -196.613, 280.009, -180.132, 260.531, -151.664, 262.029, -136.681, 227.568, -147.169, 160.144, -177.135, 122.686, -222.085, 122.686, -235.569, 82.2322 )
