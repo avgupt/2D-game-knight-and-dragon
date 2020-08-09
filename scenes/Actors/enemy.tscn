@@ -22,7 +22,7 @@ collision_mask = 9
 script = ExtResource( 1 )
 
 [node name="enemy" type="AnimatedSprite" parent="."]
-position = Vector2( 1.55087, -44.935 )
+position = Vector2( 4.17294, -40.0655 )
 scale = Vector2( 1.48684, 1.48684 )
 frames = SubResource( 1 )
 animation = "walk"
@@ -36,3 +36,12 @@ position = Vector2( -110.184, -41.9211 )
 rect = Rect2( 10, -10, 200, 100 )
 process_parent = true
 physics_process_parent = true
+
+[node name="AttackDetector" type="Area2D" parent="."]
+modulate = Color( 0.0196078, 0.152941, 0.611765, 1 )
+monitorable = false
+collision_layer = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AttackDetector"]
+polygon = PoolVector2Array( -95.2202, -63.5511, -2.6998, -63.9257, 102.182, -54.5612, 117.914, 0.876129, 96.5631, 52.5677, 91.319, -21.2239, -9.0676, -43.6985, -95.9694, -41.8256, -109.454, 6.1202, -63.0067, 18.1067, -15.81, 45.4508, -117.32, 9.11682 )
+[connection signal="body_shape_entered" from="AttackDetector" to="." method="_on_AttackDetector_body_shape_entered"]
