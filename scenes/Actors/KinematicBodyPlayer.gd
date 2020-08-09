@@ -5,6 +5,7 @@ export var attack_impulse: = 1000.0
 func _ready():
 	$player.play("idle")
 	set_process(true)
+	get_child(4).play()
 	
 func _process(delta):
 	
@@ -13,6 +14,10 @@ func _process(delta):
 	
 	if Input.is_key_pressed(KEY_SPACE):
 		$player.play("jump")
+		
+	if Input.is_key_pressed(KEY_SHIFT):
+		$player.play("attack")
+		#get_node("Player/player/attackMusic").play()
 		
 		
 func _on_EnemyDetector_area_entered(area):

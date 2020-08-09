@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bkg.wav-8427c854dedd8210e3c2c125209bc8a0.sample"
+
+[deps]
+
+source_file="res://music/bkg.wav"
+dest_files=[ "res://.import/bkg.wav-8427c854dedd8210e3c2c125209bc8a0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
