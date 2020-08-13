@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://sprites/knight/Idle (2).png" type="Texture" id=1]
 [ext_resource path="res://sprites/knight/Attack (1).png" type="Texture" id=2]
@@ -52,7 +52,6 @@
 [ext_resource path="res://sprites/knight/Jump (1).png" type="Texture" id=50]
 [ext_resource path="res://sprites/knight/Dead (5).png" type="Texture" id=51]
 [ext_resource path="res://Actors/KinematicBodyPlayer.gd" type="Script" id=52]
-[ext_resource path="res://music/attack.wav" type="AudioStream" id=53]
 [ext_resource path="res://sprites/knight/Run (9).png" type="Texture" id=54]
 [ext_resource path="res://sprites/knight/JumpAttack (2).png" type="Texture" id=55]
 [ext_resource path="res://sprites/knight/JumpAttack (10).png" type="Texture" id=56]
@@ -62,7 +61,6 @@
 [ext_resource path="res://sprites/knight/JumpAttack (3).png" type="Texture" id=60]
 [ext_resource path="res://sprites/knight/Dead (7).png" type="Texture" id=61]
 [ext_resource path="res://sprites/knight/Run (5).png" type="Texture" id=62]
-[ext_resource path="res://music/bkg.wav" type="AudioStream" id=63]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -76,16 +74,6 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 50 ), ExtResource( 20 ), ExtResource( 49 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 39 ), ExtResource( 14 ), ExtResource( 32 ), ExtResource( 45 ) ],
-"loop": true,
-"name": "jump",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 37 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 3 ), ExtResource( 47 ), ExtResource( 58 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 10 ), ExtResource( 56 ) ],
-"loop": true,
-"name": "jumpAttack",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 2 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 30 ), ExtResource( 36 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "attack",
@@ -95,33 +83,38 @@ animations = [ {
 "loop": true,
 "name": "dead",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 20 ), ExtResource( 49 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 39 ), ExtResource( 14 ), ExtResource( 32 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 3 ), ExtResource( 47 ), ExtResource( 58 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 10 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "jumpAttack",
+"speed": 10.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 448.532, 85.6747 )
-collision_mask = 8
+position = Vector2( 409.6, 151.601 )
+collision_mask = 10
 script = ExtResource( 52 )
 speed = Vector2( 500, 1000 )
 
 [node name="player" type="AnimatedSprite" parent="."]
-position = Vector2( -277.531, 167.775 )
+position = Vector2( 7.24829, 6.76343 )
 scale = Vector2( 0.208654, 0.208654 )
 frames = SubResource( 1 )
 animation = "attack"
 frame = 3
 
-[node name="attackMusic" type="AudioStreamPlayer2D" parent="player"]
-position = Vector2( 1330.1, -804.082 )
-scale = Vector2( 4.79262, 4.79262 )
-stream = ExtResource( 53 )
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( -180.799, 71.4321 )
+position = Vector2( 97.6487, -89.782 )
 scale = Vector2( 0.447344, 0.447344 )
-polygon = PoolVector2Array( -253.549, 83.7305, -304.491, 134.673, -294.003, 191.609, -301.495, 229.066, -267.034, 254.537, -294.003, 296.49, -285.013, 327.955, -290.464, 340.662, -236.815, 341.78, -183.165, 348.486, -172.64, 320.463, -196.613, 280.009, -180.132, 260.531, -188.753, 254.599, -171.987, 219.95, -169.752, 154.005, -177.135, 122.686, -222.085, 122.686, -235.569, 82.2322 )
+polygon = PoolVector2Array( -250.11, 120.139, -280.272, 154.737, -275.836, 197.319, -275.836, 235.466, -267.034, 254.537, -278.498, 293.129, -285.013, 327.955, -274.062, 333.937, -236.815, 341.78, -183.165, 348.486, -172.64, 320.463, -196.613, 280.009, -202.205, 257.644, -188.753, 254.599, -190.672, 220.385, -184.462, 156.512, -204.866, 137.882, -222.085, 122.686, -239.464, 105.945 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 92.3886, 41.7893 )
+position = Vector2( 135.494, -36.9509 )
 current = true
 limit_left = 0
 limit_top = 0
@@ -136,16 +129,9 @@ drag_margin_right = 0.0
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 modulate = Color( 0.0784314, 0.129412, 0.894118, 1 )
-collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyDetector"]
-modulate = Color( 0.803922, 0.819608, 0.847059, 1 )
-position = Vector2( 1, 1.5 )
-polygon = PoolVector2Array( -327.237, 225.325, -315.535, 229.525, -245.237, 231.825, -251.032, 211.325, -249.532, 198.825, -259.237, 187.825, -249.237, 176.825, -249.737, 152.325, -253.032, 109.325, -289.532, 96.8253, -317.032, 108.325, -327.532, 141.825, -328.032, 163.325, -326.737, 188.825 )
-
-[node name="bckg" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 63 )
-attenuation = 0.450625
+polygon = PoolVector2Array( -4.01657, -47.1911, 8.35779, -32.6954, 23.5606, -17.1391, 18.6108, 4.7812, 18.9644, 26.348, 20.3786, 41.9043, 30.2781, 61.7033, 15.4289, 72.3099, -40.7862, 74.0777, -34.7757, 48.9754, -30.5331, 22.4589, -35.1293, -5.47185, -36.8971, -28.0993, -11.0877, -47.8983, -15.3303, -58.5049, -31.9473, -57.0906, -42.9075, -35.1703, -48.5643, -3.35052, -47.5037, 17.5091, -49.625, 44.7327, -51.0392, 79.0274, 15.0753, 79.0274, 35.935, 78.3203, 40.5312, 64.5317, 36.9956, 46.8541, 36.2885, 33.0655, 38.7634, 14.3271, 35.5814, -14.6642, 23.5606, -43.3021, 1.28671, -57.0906 )
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]

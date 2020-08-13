@@ -5,7 +5,6 @@ export var attack_impulse: = 1000.0
 func _ready():
 	$player.play("idle")
 	set_process(true)
-	get_child(4).play()
 	
 func _process(delta):
 	
