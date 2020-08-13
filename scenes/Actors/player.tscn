@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://sprites/knight/Idle (2).png" type="Texture" id=1]
 [ext_resource path="res://sprites/knight/Attack (1).png" type="Texture" id=2]
@@ -61,6 +61,7 @@
 [ext_resource path="res://sprites/knight/JumpAttack (3).png" type="Texture" id=60]
 [ext_resource path="res://sprites/knight/Dead (7).png" type="Texture" id=61]
 [ext_resource path="res://sprites/knight/Run (5).png" type="Texture" id=62]
+[ext_resource path="res://music/bkg.wav" type="AudioStream" id=63]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -133,5 +134,9 @@ collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyDetector"]
 polygon = PoolVector2Array( -4.01657, -47.1911, 8.35779, -32.6954, 23.5606, -17.1391, 18.6108, 4.7812, 18.9644, 26.348, 20.3786, 41.9043, 30.2781, 61.7033, 15.4289, 72.3099, -40.7862, 74.0777, -34.7757, 48.9754, -30.5331, 22.4589, -35.1293, -5.47185, -36.8971, -28.0993, -11.0877, -47.8983, -15.3303, -58.5049, -31.9473, -57.0906, -42.9075, -35.1703, -48.5643, -3.35052, -47.5037, 17.5091, -49.625, 44.7327, -51.0392, 79.0274, 15.0753, 79.0274, 35.935, 78.3203, 40.5312, 64.5317, 36.9956, 46.8541, 36.2885, 33.0655, 38.7634, 14.3271, 35.5814, -14.6642, 23.5606, -43.3021, 1.28671, -57.0906 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 63 )
+autoplay = true
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
