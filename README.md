@@ -1,4 +1,5 @@
 # 2D-game-knight-and-dragon
+Knight and Dragon is a 2D game built using Godot engine.
 
 ## Getting Started
 Play Level1.tscn
