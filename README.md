@@ -1,5 +1,8 @@
 # 2D-game-knight-and-dragon
 
+## Getting Started
+Play Level1.tscn
+
 ## Game video
 
 https://youtu.be/iTFsdKFMviU
@@ -8,7 +11,7 @@ https://youtu.be/iTFsdKFMviU
 
 *Knight* : https://www.gameart2d.com/the-knight-free-sprites.html <br />
 *Tileset* : https://kenney.nl/assets/abstract-platformer <br />
-*Enemy* : https://craftpix.net/freebies/free-rpg-monster-sprites-pixel-art/
-*Background Music* : https://freesound.org/
+*Enemy* : https://craftpix.net/freebies/free-rpg-monster-sprites-pixel-art/ <br />
+*Background Music* : https://freesound.org/ <br />
 
 
